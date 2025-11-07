@@ -1,15 +1,18 @@
-# DevOps Project - Jenkins Pipeline
+# Projet Foyer CRUD — Jenkins CI/CD Pipeline
 
-This project implements a **CI/CD pipeline** using Jenkins.  
+This repository demonstrates a full Jenkins CI/CD pipeline for the **Projet Foyer CRUD** application, including:
 
-## Features
+- Checkout from GitHub
+- Maven build and unit tests
+- JaCoCo code coverage reports
+- SonarQube analysis
+- Deployment to Nexus
+- Docker image build and push
+- Docker Compose deployment
+- Security scan with Trivy
+- Email notifications
 
-- 📝 **Checkout code from Git**  
-- 🔨 **Maven build and unit tests**  
-- 📊 **Generate JaCoCo code coverage reports**  
-- 🔍 **Run SonarQube analysis**  
-- 🚀 **Deploy artifacts to Nexus**  
-- 🐳 **Build and push Docker images**  
-- 📦 **Deploy application with Docker Compose**  
-- 🛡️ **Scan filesystem for vulnerabilities with Trivy**  
+> Note: The actual application code for Projet Foyer CRUD is stored in another repository in my GitHub account: [https://github.com/ranim-ahmadi/Projet-foyer-crud](https://github.com/ranim-ahmadi/Projet-foyer-crud)
+
+
 
