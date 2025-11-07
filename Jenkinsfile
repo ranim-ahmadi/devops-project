@@ -3,9 +3,7 @@
 pipeline {
     agent any
 
-    environment {
-        IMAGE_NAME = 'foyer-crud-app:1.0.0'
-    }
+
 
     stages {
         stage('Checkout') {
@@ -21,8 +19,8 @@ pipeline {
         stage('JaCoCo')           { steps { script { pipelineFoyer.mvnJacoco() } } }
         stage('SonarQube')        { steps { script { pipelineFoyer.mvnSonar() } } }
         stage('Deploy to Nexus')  { steps { script { pipelineFoyer.mvnDeploy() } } }
-        stage('Docker Build')     { steps { script { pipelineFoyer.dockerBuild(env.IMAGE_NAME) } } }
-        stage('Docker Push')      { steps { script { pipelineFoyer.dockerPush(env.IMAGE_NAME) } } }
+        stage('Docker Build')     { steps { script { pipelineFoyer.dockerBuild} } }
+        stage('Docker Push')      { steps { script { pipelineFoyer.dockerPush } } }
         stage('Docker Compose')   { steps { script { pipelineFoyer.dockerComposeUp() } } }
         stage('Trivy Scan')       { steps { script { pipelineFoyer.trivyScan() } } }
     }
