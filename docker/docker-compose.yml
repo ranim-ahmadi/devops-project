@@ -1,0 +1,5 @@
+version: '3.8'
+services:
+  projet-foyer:
+    build: .
+    container_name: projet-foyer
