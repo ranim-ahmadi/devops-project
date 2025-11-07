@@ -1,6 +1,6 @@
 # DevOps Project - Jenkins Pipeline
 
-This project implements a **CI/CD pipeline** using Jenkins with a Shared Library.  
+This project implements a **CI/CD pipeline** using Jenkins.  
 
 ## Features
 
@@ -12,3 +12,4 @@ This project implements a **CI/CD pipeline** using Jenkins with a Shared Library
 - 🐳 **Build and push Docker images**  
 - 📦 **Deploy application with Docker Compose**  
 - 🛡️ **Scan filesystem for vulnerabilities with Trivy**  
+
