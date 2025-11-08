@@ -1,4 +1,4 @@
-# 🏢 Projet Foyer CRUD — Jenkins CI/CD Pipeline
+# Jenkins CI/CD Pipeline
 
 This repository demonstrates a full Jenkins CI/CD pipeline for the **Projet Foyer CRUD** application, including:
 
@@ -40,5 +40,13 @@ This view shows the execution time of each stage in the CI/CD pipeline: checkout
 This screenshot shows the configuration of the Maven Releases repository in Sonatype Nexus, used to store the generated artifacts.
 
 <img width="1582" height="851" alt="Nexus Repository Configuration" src="https://github.com/user-attachments/assets/aa5ecc07-ba7a-464c-9366-2172d86d7747" />
+
+
+## 🚀 Backend Running Successfully — Swagger UI
+
+This screenshot confirms that the backend of the **Projet Foyer CRUD** application is running correctly, with all REST APIs accessible via Swagger UI.
+
+<img width="1586" height="888" alt="image" src="https://github.com/user-attachments/assets/d18a44e9-455d-42ac-882b-36146d16f885" />
+<img width="1422" height="870" alt="image" src="https://github.com/user-attachments/assets/e8da6e8e-b243-45bf-b6ff-da6e8fe4239f" />
 
 
