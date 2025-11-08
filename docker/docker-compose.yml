@@ -1,5 +1,48 @@
-version: '3.8'
+version: "3.8"
+
 services:
-  projet-foyer:
-    build: .
-    container_name: projet-foyer
+  mysqldb:
+    image: mysql:5.7
+    container_name: projet-foyer-mysql
+    restart: unless-stopped
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_ALLOW_EMPTY_PASSWORD=no
+      - MYSQL_DATABASE=tp_foyer_db
+      - innodb_force_recovery=1
+    ports:
+      - "3306:3306"
+    volumes:
+      - db:/var/lib/mysql
+    networks:
+      - foyer-network
+
+  tp-foyer-app:
+    image: ranimahmadi/projet-foyer-crud:latest
+    container_name: projet-foyer-app
+    depends_on:
+      - mysqldb
+    restart: on-failure
+    ports:
+      - "8089:8089"
+    environment:
+      SPRING_APPLICATION_JSON: '{
+        "spring.datasource.url": "jdbc:mysql://mysqldb:3306/tp_foyer_db?createDatabaseIfNotExist=true",
+        "spring.datasource.username": "root",
+        "spring.datasource.password": "${MYSQL_ROOT_PASSWORD}",
+        "spring.jpa.properties.hibernate.dialect": "org.hibernate.dialect.MySQLDialect",
+        "spring.jpa.hibernate.ddl-auto": "update"
+      }'
+    stdin_open: true
+    tty: true
+    networks:
+      - foyer-network
+
+volumes:
+  db:
+    name: projet-foyer-mysql-data
+
+networks:
+  foyer-network:
+    name: projet-foyer-network
+    driver: bridge
