@@ -16,3 +16,18 @@ This repository demonstrates a full Jenkins CI/CD pipeline for the **Projet Foye
 
 
 
+Jenkins Monitoring Dashboard (Grafana)
+
+This dashboard visualizes Jenkins performance, memory usage, job health, and queue state.
+
+<img width="1582" height="851" alt="Jenkins Monitoring Dashboard" src="https://github.com/user-attachments/assets/aa5ecc07-ba7a-464c-9366-2172d86d7747" />
+Jenkins Stage View
+
+This view shows the execution time of each stage in the CI/CD pipeline: checkout, build, testing, SonarQube, Nexus deploy, Docker build & push, and more.
+
+<img width="1108" height="402" alt="Jenkins Stage View (Part 1)" src="https://github.com/user-attachments/assets/551c34e5-3f59-4265-9c3a-9da4a1c51d06" /> <img width="1297" height="315" alt="Jenkins Stage View (Part 2)" src="https://github.com/user-attachments/assets/78e384d0-37ed-47eb-8d67-968cd9d5b35d" />
+Nexus Repository Configuration
+
+This screenshot shows the configuration of the Maven Releases repository in Sonatype Nexus, used to store the generated artifacts.
+
+<img width="1558" height="838" alt="Nexus Repository Configuration" src="https://github.com/user-attachments/assets/ae4a40bf-b829-47d9-9e6e-72d08ce9ac17" />
